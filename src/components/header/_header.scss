@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4rem;
+  padding-top: 1.5rem;
+  margin-bottom: 4rem;
+
+  &__logo {
+    color: $color-tertiary;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+}
+
+.nav {
+  display: flex;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  list-style-type: none;
+
+  &__item:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+
+  &__link {
+    color: $color-grayed-out;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}

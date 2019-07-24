@@ -1,0 +1,13 @@
+@import "./utils/sass/base";
+@import "./utils/sass/variables";
+@import "./utils/sass/layout";
+
+@import "./components/common/heading/heading";
+
+@import "./components/header/header";
+@import "./components/intro/intro";
+
+@import "./components/hero/hero";
+@import "./components/about/about";
+@import "./components/skills/skills";
+@import "./components/projects/projects";

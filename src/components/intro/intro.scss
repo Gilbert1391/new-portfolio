@@ -1,0 +1,27 @@
+.intro {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+
+  &__name {
+    font-family: "Anton";
+    font-size: 20rem;
+    line-height: 1;
+    text-shadow: 1px 20px 8px rgb(169, 47, 41);
+    color: $color-primary;
+  }
+
+  &__profession {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: $color-tertiary;
+    margin-top: 1rem;
+    margin-left: auto;
+
+    &--specialism {
+      color: $color-yellow;
+      font-weight: 600;
+    }
+  }
+}

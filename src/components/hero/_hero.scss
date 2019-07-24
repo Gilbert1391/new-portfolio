@@ -1,0 +1,15 @@
+.hero {
+  height: 100vh;
+  background-color: $color-primary;
+
+  &__container {
+    display: flex;
+    padding-left: 2.5rem;
+    padding-right: 6rem;
+  }
+}
+
+.code {
+  width: 45%;
+  border: 1px solid $color-tertiary;
+}
