@@ -9,7 +9,7 @@ class SideNav extends Component {
   render() {
     return (
       <nav className="side-nav">
-        <div>Menu here</div>
+        <div>Button</div>
         <ul className="side-nav-navigation">
           <li className="side-nav-navigation__item">
             <a
@@ -52,6 +52,13 @@ class SideNav extends Component {
                 className="side-nav-navigation__icon"
               />
             </a>
+          </li>
+          <li className="side-nav-navigation__item">
+            <img
+              src={mailIcon}
+              alt="Mail icon"
+              className="side-nav-navigation__icon"
+            />
           </li>
         </ul>
       </nav>
