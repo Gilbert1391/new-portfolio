@@ -5,7 +5,7 @@ class Skills extends Component {
   state = {};
   render() {
     return (
-      <section className="section">
+      <section name="skills" className="section">
         <Heading title="skills" number="02" />
       </section>
     );

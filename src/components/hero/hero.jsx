@@ -6,7 +6,7 @@ class Hero extends Component {
   state = {};
   render() {
     return (
-      <section className="hero">
+      <section name="home" className="hero">
         <Header />
         <div className="hero__container">
           <div className="code">CODE IMAGE</div>

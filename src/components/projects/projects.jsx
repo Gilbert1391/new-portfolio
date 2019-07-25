@@ -6,7 +6,7 @@ class Projects extends Component {
 
   render() {
     return (
-      <section className="section">
+      <section name="projects" className="section">
         <Heading title="projects" number="03" />
       </section>
     );

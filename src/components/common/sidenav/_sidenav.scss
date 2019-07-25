@@ -1,0 +1,32 @@
+.side-nav {
+  width: 6rem;
+  height: 97vh;
+  margin-top: 1rem;
+  position: sticky;
+  top: 1rem;
+  background-color: $color-primary;
+}
+
+.side-nav-navigation {
+  margin-top: 8rem;
+  list-style-type: none;
+
+  &__item {
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+
+  &__link {
+    height: 100%;
+    display: inline-block;
+  }
+
+  &__icon {
+    height: 100%;
+  }
+}

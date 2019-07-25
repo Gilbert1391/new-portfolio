@@ -1,6 +1,13 @@
-.section {
-  height: 100vh;
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 1rem;
+  padding-left: 10rem;
   background-color: $color-secondary;
-  padding-top: $section-padding-top;
-  padding-left: $section-padding-left;
+}
+
+.section {
+  width: 75vw;
+  height: 100vh;
+  padding-top: 3.5rem;
 }

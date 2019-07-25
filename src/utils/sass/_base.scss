@@ -70,10 +70,22 @@ html {
   }
 }
 
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,600,700,900");
-@import url("https://fonts.googleapis.com/css?family=Anton&display=swap");
+@font-face {
+  font-family: helveticaNeue;
+  src: url("/assets/fonts/helvetica-neue.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: impact;
+  src: url("/assets/fonts/impact.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: theBoldFont;
+  src: url("/assets/fonts/theboldfont.ttf") format("ttf");
+}
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "helveticaNeue", sans-serif;
   line-height: 1.4;
 }

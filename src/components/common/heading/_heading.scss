@@ -22,11 +22,12 @@
 
   &__title {
     color: $color-white;
-    font-size: 4rem;
+    font-family: "theBoldFont";
+    font-size: 4.5rem;
     text-transform: uppercase;
     position: absolute;
     top: 50%;
-    left: 35%;
+    left: 45%;
     transform: translate(0, -50%);
     z-index: 0;
   }

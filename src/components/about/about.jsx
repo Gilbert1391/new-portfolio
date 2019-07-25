@@ -6,7 +6,7 @@ class About extends Component {
 
   render() {
     return (
-      <section className="section">
+      <section name="about" className="section">
         <Heading title="about me" number="01" />
       </section>
     );
