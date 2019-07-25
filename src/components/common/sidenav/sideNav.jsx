@@ -9,6 +9,7 @@ class SideNav extends Component {
   render() {
     return (
       <nav className="side-nav">
+        <div>Menu here</div>
         <ul className="side-nav-navigation">
           <li className="side-nav-navigation__item">
             <a

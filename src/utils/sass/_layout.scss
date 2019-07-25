@@ -1,13 +1,23 @@
 .container {
   display: flex;
-  justify-content: space-between;
   padding-right: 1rem;
   padding-left: 10rem;
   background-color: $color-secondary;
+
+  &__main {
+    width: 95%;
+  }
+
+  &__side {
+    min-width: 5.5rem;
+    height: 100vh;
+    padding: 1rem 0;
+  }
 }
 
 .section {
-  width: 75vw;
+  width: 90%;
   height: 100vh;
   padding-top: 3.5rem;
+  border: 1px solid pink;
 }

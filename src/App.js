@@ -21,13 +21,21 @@ class App extends Component {
     return (
       <React.Fragment>
         <Hero />
-        <main className="container">
-          <div>
-            <About />
-            <Skills />
-            <Projects />
-          </div>
-          <SideNav />
+        <main>
+          <StickyContainer className="container">
+            <div className="container__main">
+              <About />
+              <Skills />
+              <Projects />
+            </div>
+            <Sticky>
+              {({ style }) => (
+                <div style={style} className="container__side">
+                  <SideNav />
+                </div>
+              )}
+            </Sticky>
+          </StickyContainer>
         </main>
       </React.Fragment>
     );
