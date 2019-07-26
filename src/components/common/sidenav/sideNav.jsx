@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import githubIcon from "../../../assets/images/github-logo.png";
 import linkedinIcon from "../../../assets/images/linkedin-logo.png";
 import facebookIcon from "../../../assets/images/facebook-logo.png";

@@ -1,0 +1,23 @@
+.skills-grid {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+
+  &__item {
+    width: calc(100% / 6 - 2rem);
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid $color-yellow;
+  }
+
+  &__item:nth-child(n + 1):nth-child(-n + 6) {
+    margin-top: 0;
+  }
+}

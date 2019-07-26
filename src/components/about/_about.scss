@@ -12,7 +12,6 @@
   top: 1rem;
   left: 20%;
   z-index: 4;
-  color: $color-tertiary;
   background-color: $color-primary;
   font-size: 1.3rem;
 
@@ -30,7 +29,7 @@
   position: absolute;
   top: 0;
   z-index: 5;
-  background-color: $color-tertiary;
+  background-color: $color-white;
 
   &__img {
     width: 75%;
