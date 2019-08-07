@@ -1,0 +1,108 @@
+.project-card {
+  width: 60rem;
+  height: 35rem;
+  padding-top: 2.2rem;
+  padding-left: 1rem;
+  margin-left: 15rem;
+  margin-bottom: 2.5rem;
+  background-color: $color-primary;
+  position: relative;
+
+  &__img-container {
+    height: 85%;
+    width: 48rem;
+    position: absolute;
+    top: 50%;
+    right: -25%;
+    transform: translateY(-50%);
+  }
+
+  &__img-container::before {
+    position: absolute;
+    content: "";
+    width: 65%;
+    height: 100%;
+    box-shadow: -15px 10px 15px rgb(169, 47, 41);
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    margin-top: 6rem;
+    margin-left: 2.5rem;
+    width: 35%;
+  }
+
+  &__title {
+    font-family: "TheBoldFont";
+    font-size: 3rem;
+  }
+}
+
+.carousel-btns {
+  position: relative;
+
+  &__button {
+    width: 5rem;
+    height: 3.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 2.5rem;
+    display: block;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid $color-white;
+    box-shadow: 5px 5px 10px rgb(169, 47, 41);
+
+    &--icon {
+      width: 100%;
+      height: 100%;
+      color: $color-white;
+      cursor: pointer;
+    }
+  }
+
+  &__button:last-child {
+    margin-bottom: 0;
+  }
+
+  &__display {
+    position: absolute;
+    top: 50%;
+    left: -2rem;
+    transform: translateY(-50%) rotate(270deg);
+    font-size: 2rem;
+    font-weight: bold;
+    word-spacing: -0.2rem;
+
+    &--prev {
+      color: $color-yellow;
+    }
+  }
+}
+
+.card-btn {
+  margin-left: 15rem;
+  padding: 0.5rem 2.5rem;
+  color: $color-tertiary;
+  font-size: 1.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid $color-tertiary;
+  outline: none;
+  transition: 0.3s;
+
+  &--sm-ml {
+    margin-left: 1.5rem;
+  }
+}
+
+.card-btn:hover {
+  color: $color-secondary;
+  background-color: $color-yellow;
+  border: 1px solid $color-yellow;
+}

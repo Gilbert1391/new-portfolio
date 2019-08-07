@@ -11,19 +11,16 @@
   list-style-type: none;
 
   &__item {
-    height: 2.5rem;
     cursor: pointer;
   }
 
   &__item:not(:last-child) {
-    margin-bottom: 3rem;
-  }
-
-  &__link {
-    height: 100%;
+    margin-bottom: 2rem;
   }
 
   &__icon {
-    height: 100%;
+    color: $color-secondary;
+    width: 2.5rem;
+    height: 2.5rem;
   }
 }

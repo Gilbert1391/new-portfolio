@@ -1,5 +1,4 @@
 .intro {
-  width: fit-content;
   display: flex;
   flex-direction: column;
   margin-left: auto;
@@ -8,7 +7,6 @@
     font-family: "impact";
     font-size: 20rem;
     line-height: 1;
-    text-shadow: 1px 20px 8px rgb(169, 47, 41);
     color: $color-primary;
   }
 
@@ -16,12 +14,31 @@
     font-size: 2rem;
     text-transform: uppercase;
     color: $color-tertiary;
-    margin-top: 1rem;
     margin-left: auto;
 
     &--specialism {
       color: $color-yellow;
       font-weight: 600;
     }
+  }
+}
+
+.intro__name {
+  animation: intro__name 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22) 400ms both;
+}
+
+@keyframes intro__name {
+  0% {
+    transform: translateY(0);
+    transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  50% {
+    text-shadow: 1px 1px 1px rgb(169, 47, 41);
+  }
+  100% {
+    transform: translateY(-1.8rem);
+    transform-origin: 50% 50%;
+    text-shadow: 1px 20px 8px rgb(169, 47, 41);
   }
 }
