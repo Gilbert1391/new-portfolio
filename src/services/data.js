@@ -1,5 +1,3 @@
-import img from "../assets/images/fifteen.png";
-
 export const skillsData = [
   { id: 1, name: "hmtl", category: "frontend" },
   { id: 2, name: "css", category: "frontend" },
@@ -16,7 +14,7 @@ export const skillsData = [
   { id: 13, name: "sql", category: "backend" },
   { id: 15, name: "postgresql", category: "backend" },
   { id: 14, name: "mongodb", category: "backend" },
-  { id: 15, name: "git", category: "other" }
+  { id: 16, name: "git", category: "other" }
 ];
 
 export const projectsData = [
@@ -26,7 +24,7 @@ export const projectsData = [
     description: `Web app built with the MERN stack. Add /admin to the URL and login as admin 
                   to modify the data by sending HTTP requests to the server. Credentials:
                   username: admin, password: my_password`,
-    imgUrl: "../assets/images/fifteen.png",
+    imgName: "fifteen.png",
     siteUrl: "https://fifteen-app.herokuapp.com/",
     githubUrl: "https://github.com/Gilbert1391/fifteen-webapp"
   },
@@ -36,7 +34,7 @@ export const projectsData = [
     description: `Single Page Application (SPA) implemented with React, I used the 
                   movie database API to fetch dynamic data to the app. Check repo on 
                   GitHub for more information."`,
-    imgUrl: "../assets/images/fifteen.png",
+    imgName: "dashboard-box.png",
     siteUrl: "https://dashboardbox.netlify.com/#/",
     githubUrl: "https://github.com/Gilbert1391/dashboardbox"
   }
