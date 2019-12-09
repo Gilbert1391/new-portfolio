@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import { FaAngleUp, FaAngleDown } from "react-icons/fa";
 import { projectsData } from "../../services/data";
 import Heading from "../common/heading/heading";
-import fifteen from "../../assets/images/fifteen.png";
 
 class Projects extends Component {
   state = {
     projects: [],
     selectedProject: {},
-    carouselIndex: 0
+    currentSlideIdx: 0,
+    currentActiveSlide: null
   };
 
   componentDidMount = () => {
@@ -16,36 +16,49 @@ class Projects extends Component {
     this.setState({ selectedProject: projectsData[0] });
   };
 
+  componentDidUpdate = (prevProps, prevState) => {
+    console.log(prevState);
+  };
+
   nextButtonHandler = () => {
-    let { projects, carouselIndex } = this.state;
+    let { projects, currentSlideIdx, currentActiveSlide } = this.state;
 
-    carouselIndex++;
+    currentSlideIdx++;
 
-    if (carouselIndex === projects.length) {
-      carouselIndex = 0;
-      this.setState({ carouselIndex });
+    if (currentSlideIdx === projects.length) {
+      currentSlideIdx = 0;
+      this.setState({ currentSlideIdx });
     }
 
-    this.setState({ carouselIndex });
-    this.setState({ selectedProject: projects[carouselIndex] });
+    currentActiveSlide = currentSlideIdx;
+
+    this.setState({ currentSlideIdx });
+    this.setState({
+      selectedProject: projects[currentSlideIdx],
+      currentActiveSlide
+    });
   };
 
   backButtonHandler = () => {
-    let { projects, carouselIndex } = this.state;
+    let { projects, currentSlideIdx } = this.state;
 
-    if (carouselIndex === 0) {
-      carouselIndex = projects.length;
-      this.setState({ carouselIndex });
+    if (currentSlideIdx === 0) {
+      currentSlideIdx = projects.length;
+      this.setState({ currentSlideIdx });
     }
 
-    carouselIndex--;
-    this.setState({ carouselIndex, selectedProject: projects[carouselIndex] });
+    currentSlideIdx--;
+
+    this.setState({
+      currentSlideIdx,
+      selectedProject: projects[currentSlideIdx]
+    });
   };
 
   render() {
-    const { selectedProject, carouselIndex } = this.state;
+    const { selectedProject, currentSlideIdx, currentActiveSlide } = this.state;
     const imgPath = require.context("../../assets/images/", true);
-    const currentImg = imgPath("./" + projectsData[carouselIndex].imgName);
+    const currentImg = imgPath("./" + projectsData[currentSlideIdx].imgName);
 
     return (
       <section name="projects" className="section">
@@ -68,20 +81,32 @@ class Projects extends Component {
               <FaAngleDown className="carousel-btns__button--icon" />
             </button>
           </div>
-          <div className="project-card__content">
+          <div
+            className={
+              currentActiveSlide === currentSlideIdx
+                ? "project-card__content fade-in"
+                : "project-card__content"
+            }
+          >
             <h2 className="project-card__title">{selectedProject.name}</h2>
             <p>{selectedProject.description}</p>
           </div>
-          <div className="project-card__img-container">
+          <div
+            className={
+              currentActiveSlide === currentSlideIdx
+                ? "project-card__img-container fade-in"
+                : "project-card__img-container"
+            }
+          >
             <img
-              src={selectedProject.imgName ? currentImg : ""}
+              src={currentImg}
               alt={selectedProject.name + " image"}
               className="project-card__img"
             />
           </div>
         </div>
         <a
-          className="card-btn "
+          className="card-btn"
           href={selectedProject.siteUrl}
           target="_blank"
           rel="noopener noreferrer"

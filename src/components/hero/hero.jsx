@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Header from "../header/header";
 import Intro from "../intro/intro";
+import CodeScrolling from "../code-scrolling/codeScrolling";
 
 class Hero extends Component {
   state = {};
@@ -9,7 +10,9 @@ class Hero extends Component {
       <section name="home" className="hero">
         <Header />
         <div className="hero__container">
-          <div className="code">CODE IMAGE</div>
+          <div className="code">
+            <CodeScrolling />
+          </div>
           <Intro />
         </div>
       </section>
