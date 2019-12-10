@@ -1,15 +1,18 @@
 .hero {
   height: 100vh;
   background-color: $color-primary;
+  overflow: hidden;
 
   &__container {
     display: flex;
     padding-left: 2.5rem;
     padding-right: 6rem;
+    height: 100%;
   }
 }
 
 .code {
   width: 45%;
-  border: 1px solid $color-tertiary;
+  height: 100%;
+  // border: 1px solid $color-tertiary;
 }
