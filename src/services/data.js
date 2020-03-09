@@ -2,18 +2,16 @@ export const skillsData = [
   { name: "hmtl", category: "frontend" },
   { name: "css", category: "frontend" },
   { name: "sass", category: "frontend" },
-  { name: "bem", category: "frontend" },
-  { name: "javascript", category: "frontend" },
+  { name: "javascript", category: "language" },
+  { name: "C#", category: "language" },
   { name: "react", category: "frontend" },
   { name: "angular", category: "frontend" },
   { name: "ionic", category: "frontend" },
-  { name: "jquery", category: "frontend" },
   { name: "node.js", category: "backend" },
   { name: "nestjs", category: "backend" },
   { name: "express.js", category: "backend" },
   { name: "sql", category: "backend" },
-  { name: "postgresql", category: "backend" },
-  { name: "mongodb", category: "backend" },
+  { name: "ASP.NET", category: "backend" },
   { name: "git", category: "other" }
 ];
 

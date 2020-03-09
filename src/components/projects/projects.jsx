@@ -3,6 +3,7 @@ import { FaAngleUp, FaAngleDown } from "react-icons/fa";
 import { projectsData } from "../../services/data";
 import Heading from "../common/heading/heading";
 
+/*
 class Projects extends Component {
   state = {
     projects: [],
@@ -125,5 +126,19 @@ class Projects extends Component {
     );
   }
 }
+*/
+
+const Projects = () => {
+  return (
+    <section name="projects" className="section">
+      <Heading title="projects" number="03" />
+      <div className="card-grid">
+        <div className="card">1</div>
+        <div className="card">1</div>
+        <div className="card">1</div>
+      </div>
+    </section>
+  );
+};
 
 export default Projects;
