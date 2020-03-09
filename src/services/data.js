@@ -1,25 +1,26 @@
 export const skillsData = [
-  { id: 1, name: "hmtl", category: "frontend" },
-  { id: 2, name: "css", category: "frontend" },
-  { id: 3, name: "sass", category: "frontend" },
-  { id: 4, name: "bem", category: "frontend" },
-  { id: 5, name: "javascript", category: "frontend" },
-  { id: 6, name: "react", category: "frontend" },
-  { id: 7, name: "angular", category: "frontend" },
-  { id: 8, name: "ionic", category: "frontend" },
-  { id: 9, name: "jquery", category: "frontend" },
-  { id: 10, name: "node.js", category: "backend" },
-  { id: 11, name: "nestjs", category: "backend" },
-  { id: 12, name: "express.js", category: "backend" },
-  { id: 13, name: "sql", category: "backend" },
-  { id: 15, name: "postgresql", category: "backend" },
-  { id: 14, name: "mongodb", category: "backend" },
-  { id: 16, name: "git", category: "other" }
+  { name: "hmtl", category: "frontend" },
+  { name: "css", category: "frontend" },
+  { name: "sass", category: "frontend" },
+  { name: "bem", category: "frontend" },
+  { name: "javascript", category: "frontend" },
+  { name: "react", category: "frontend" },
+  { name: "angular", category: "frontend" },
+  { name: "ionic", category: "frontend" },
+  { name: "jquery", category: "frontend" },
+  { name: "node.js", category: "backend" },
+  { name: "nestjs", category: "backend" },
+  { name: "express.js", category: "backend" },
+  { name: "sql", category: "backend" },
+  { name: "postgresql", category: "backend" },
+  { name: "mongodb", category: "backend" },
+  { name: "git", category: "other" }
 ];
+
+skillsData.forEach((e, i) => (e.id = i));
 
 export const projectsData = [
   {
-    id: 1,
     name: "Fifteen",
     description: `Web app built with the MERN stack. Add /admin to the URL and login as admin 
                   to modify the data by sending HTTP requests to the server. Credentials:
@@ -29,7 +30,6 @@ export const projectsData = [
     githubUrl: "https://github.com/Gilbert1391/fifteen-webapp"
   },
   {
-    id: 2,
     name: "Dashboard box",
     description: `Single Page Application (SPA) implemented with React, I used the 
                   movie database API to fetch dynamic data to the app. Check repo on 
@@ -39,7 +39,6 @@ export const projectsData = [
     githubUrl: "https://github.com/Gilbert1391/dashboardbox"
   },
   {
-    id: 3,
     name: "Bryant hill",
     description: `I built this website thinking about real estate, 
                   it has galleries and individual listing pages. 
@@ -49,3 +48,5 @@ export const projectsData = [
     githubUrl: "https://github.com/Gilbert1391/Bryant-Hill"
   }
 ];
+
+projectsData.forEach((e, i) => (e.id = i));
