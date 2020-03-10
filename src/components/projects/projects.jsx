@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { FaAngleUp, FaAngleDown } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { projectsData } from "../../services/data";
 import Heading from "../common/heading/heading";
 
@@ -129,13 +129,34 @@ class Projects extends Component {
 */
 
 const Projects = () => {
+  const imgPath = require.context("../../assets/images/", true);
+
   return (
     <section name="projects" className="section">
       <Heading title="projects" number="03" />
       <div className="card-grid">
-        <div className="card">1</div>
-        <div className="card">1</div>
-        <div className="card">1</div>
+        {projectsData.map(e => (
+          <div className="card" key={e.id}>
+            <div className="card-thumbnail">
+              <a
+                className="card-thumbnail__img-container"
+                href={e.siteUrl}
+                target="_blank"
+              >
+                <img
+                  src={imgPath("./" + e.imgName)}
+                  alt={e.name}
+                  className="card-thumbnail__img"
+                />
+                <div className="card__title">{e.name}</div>
+              </a>
+            </div>
+            <div className="card-description">
+              {e.description}
+              <FaGithub className="card__icon" />
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
