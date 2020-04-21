@@ -1,5 +1,5 @@
 export const skillsData = [
-  { name: "hmtl", category: "frontend" },
+  { name: "html", category: "frontend" },
   { name: "css", category: "frontend" },
   { name: "sass", category: "frontend" },
   { name: "javascript", category: "language" },
@@ -31,7 +31,7 @@ export const projectsData = [
     name: "Dashboard box",
     description: `Single Page Application (SPA) implemented with React, I used the 
                   movie database API to fetch dynamic data to the app. Check repo on 
-                  GitHub for more information."`,
+                  GitHub for more information.`,
     imgName: "dashboard-box.png",
     siteUrl: "https://dashboardbox.netlify.com/#/",
     githubUrl: "https://github.com/Gilbert1391/dashboardbox"

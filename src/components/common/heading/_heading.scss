@@ -9,7 +9,7 @@
     height: 100%;
     display: flex;
     align-items: center;
-    background-color: $color-white;
+    background-color: $color-primary;
   }
 
   &__number {
@@ -17,12 +17,12 @@
     font-weight: 600;
     margin-left: auto;
     margin-right: 3rem;
-    color: $color-primary;
+    color: $color-secondary;
     z-index: 5;
   }
 
   &__title {
-    color: $color-white;
+    color: $color-primary;
     font-family: "theBoldFont";
     font-size: 4.5rem;
     text-transform: uppercase;

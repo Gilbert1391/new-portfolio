@@ -18,11 +18,6 @@ const Header = () => {
             </Link>
           </li>
           <li className="nav__item">
-            <Link to="skills" spy={true} smooth={true} className="nav__link">
-              Skills
-            </Link>
-          </li>
-          <li className="nav__item">
             <Link to="projects" spy={true} smooth={true} className="nav__link">
               Projects
             </Link>

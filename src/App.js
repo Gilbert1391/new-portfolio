@@ -4,7 +4,6 @@ import { Events } from "react-scroll";
 
 import Hero from "./components/hero/hero";
 import About from "./components/about/about";
-import Skills from "./components/skills/skills";
 import Projects from "./components/projects/projects";
 import SideNav from "./components/common/sidenav/sideNav";
 
@@ -16,7 +15,6 @@ const App = () => {
         <StickyContainer className="container">
           <div className="container__main">
             <About />
-            <Skills />
             <Projects />
           </div>
           <Sticky>
