@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 import { FaGithub, FaLinkedin, FaPaperPlane } from "react-icons/fa";
+import BurgerMenu from "../burger-menu/burger-menu";
 
 class SideNav extends Component {
   render() {
     return (
       <nav className="side-nav">
         <ul className="side-nav-navigation">
+          <li className="side-nav-navigation__item">
+            <BurgerMenu />
+          </li>
           <li className="side-nav-navigation__item">
             <a
               href="https://github.com/Gilbert1391"

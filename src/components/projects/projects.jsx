@@ -27,7 +27,16 @@ const Projects = () => {
               </a>
             </div>
             <div className="card-description">
-              <h3 className="card-description__heading">{e.name}</h3>
+              <h3 className="card-description__heading">
+                <a
+                  href={e.siteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="card-description__link"
+                >
+                  {e.name}
+                </a>
+              </h3>
               <p>{e.description}</p>
               <a
                 className="card-description__link"

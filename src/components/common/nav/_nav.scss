@@ -1,0 +1,21 @@
+.nav {
+  display: flex;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  list-style-type: none;
+
+  &__item:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+
+  &__link {
+    color: $color-grayed-out;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+.active {
+  color: $color-secondary;
+}

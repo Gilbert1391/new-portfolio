@@ -41,17 +41,12 @@
   }
 
   &__link {
-    font-size: 1.8rem;
-    color: $color-grayed-out;
     text-decoration: none;
-    position: absolute;
-    bottom: 1rem;
-    transform: translateX(-50%);
-    transition: 0.2s;
+    color: #404040;
   }
 
   &__link:hover {
-    color: $color-dark;
+    text-decoration: underline;
   }
 
   &__icon {

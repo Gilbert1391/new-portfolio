@@ -12,7 +12,7 @@ export const skillsData = [
   { name: "express.js", category: "backend" },
   { name: "sql", category: "backend" },
   { name: "ASP.NET", category: "backend" },
-  { name: "git", category: "other" }
+  { name: "git", category: "other" },
 ];
 
 skillsData.forEach((e, i) => (e.id = i));
@@ -25,7 +25,7 @@ export const projectsData = [
                   username: admin, password: my_password`,
     imgName: "fifteen.png",
     siteUrl: "https://fifteen-app.herokuapp.com/",
-    githubUrl: "https://github.com/Gilbert1391/fifteen-webapp"
+    githubUrl: "https://github.com/Gilbert1391/fifteen-webapp",
   },
   {
     name: "Dashboard box",
@@ -34,7 +34,7 @@ export const projectsData = [
                   GitHub for more information.`,
     imgName: "dashboard-box.png",
     siteUrl: "https://dashboardbox.netlify.com/#/",
-    githubUrl: "https://github.com/Gilbert1391/dashboardbox"
+    githubUrl: "https://github.com/Gilbert1391/dashboardbox",
   },
   {
     name: "Bryant hill",
@@ -43,8 +43,8 @@ export const projectsData = [
                   I integrated some vanilla JavaScript functionalities.`,
     imgName: "bryant-hill.png",
     siteUrl: "https://gilbert1391.github.io/Bryant-Hill/",
-    githubUrl: "https://github.com/Gilbert1391/Bryant-Hill"
-  }
+    githubUrl: "https://github.com/Gilbert1391/Bryant-Hill",
+  },
 ];
 
 projectsData.forEach((e, i) => (e.id = i));

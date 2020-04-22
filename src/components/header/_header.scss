@@ -1,32 +1,8 @@
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  padding: 0 4rem;
+  padding: 0 6rem;
   padding-top: 1.5rem;
   margin-bottom: 4rem;
-
-  &__logo {
-    color: $color-tertiary;
-    font-size: 2.5rem;
-    font-weight: bold;
-  }
-}
-
-.nav {
-  display: flex;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  list-style-type: none;
-
-  &__item:not(:last-child) {
-    margin-right: 1.5rem;
-  }
-
-  &__link {
-    color: $color-tertiary;
-    font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
-  }
 }
