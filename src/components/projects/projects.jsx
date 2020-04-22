@@ -39,7 +39,7 @@ const Projects = () => {
               </h3>
               <p>{e.description}</p>
               <a
-                className="card-description__link"
+                className="card-description__link-icon"
                 href={e.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
