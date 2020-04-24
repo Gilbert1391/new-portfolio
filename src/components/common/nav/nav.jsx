@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-scroll";
+import HeadingBarContext from "../../../context/HeadingBarContext";
 
 const Nav = () => {
+  const { onLinkAboutState, onLinkProjectsState } = useContext(
+    HeadingBarContext
+  );
+
   return (
     <nav>
       <ul className="nav">
@@ -23,6 +28,7 @@ const Nav = () => {
             smooth={true}
             className="nav__link"
             activeClass="active"
+            onSetActive={onLinkAboutState}
           >
             About
           </Link>
@@ -34,6 +40,7 @@ const Nav = () => {
             smooth={true}
             className="nav__link"
             activeClass="active"
+            onSetActive={onLinkProjectsState}
           >
             Projects
           </Link>

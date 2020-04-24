@@ -8,7 +8,7 @@ const Projects = () => {
 
   return (
     <section name="projects" className="section">
-      <Heading title="projects" number="03" />
+      <Heading title="projects" number="02" section="projects" />
       <div className="card-grid">
         {projectsData.map((e) => (
           <article className="card" key={e.id}>
