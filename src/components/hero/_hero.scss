@@ -3,15 +3,13 @@
   background-color: $color-primary;
   overflow: hidden;
 
-  &__container {
-    display: flex;
-    padding-left: 2.5rem;
-    padding-right: 6rem;
-    height: 100%;
+  &__intro {
+    width: 70rem;
+    height: 20rem;
+    position: absolute;
+    top: 50%;
+    margin-top: -10rem;
+    left: 50%;
+    margin-left: -35rem;
   }
-}
-
-.code {
-  width: 45%;
-  height: 100%;
 }

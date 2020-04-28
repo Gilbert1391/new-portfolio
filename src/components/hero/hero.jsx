@@ -1,16 +1,14 @@
 import React from "react";
 import Header from "../header/header";
+import Drawing from "../drawing/drawing";
 import Intro from "../intro/intro";
-import CodeScrolling from "../code-scrolling/codeScrolling";
 
 const Hero = () => {
   return (
     <section name="home" className="hero">
       <Header />
-      <div className="hero__container">
-        <div className="code">
-          <CodeScrolling />
-        </div>
+      <Drawing />
+      <div className="hero__intro">
         <Intro />
       </div>
     </section>

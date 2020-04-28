@@ -1,39 +1,13 @@
 .intro {
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  margin-left: auto;
-
-  &__name {
-    font-family: "impact";
-    font-size: 20rem;
-    line-height: 1;
-    color: $color-primary;
-  }
-
-  &__profession {
-    font-size: 2rem;
-    text-transform: uppercase;
-    color: $color-tertiary;
-    margin-left: auto;
-  }
+  justify-content: center;
+  align-items: center;
+  font-family: "theBoldFont";
+  font-size: 4.5rem;
+  color: $color-tertiary;
 }
 
-.intro__name {
-  animation: intro__name 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22) 400ms both;
-}
-
-@keyframes intro__name {
-  0% {
-    transform: translateY(0);
-    transform-origin: 50% 50%;
-    text-shadow: none;
-  }
-  50% {
-    text-shadow: 1px 1px 1px rgb(46, 35, 46);
-  }
-  100% {
-    transform: translateY(-1.8rem);
-    transform-origin: 50% 50%;
-    text-shadow: 1px 20px 8px rgb(46, 35, 46);
-  }
+.intro p:first-child {
+  text-align: center;
 }
