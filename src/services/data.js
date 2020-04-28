@@ -3,6 +3,7 @@ export const skillsData = [
   { name: "css", category: "frontend" },
   { name: "sass", category: "frontend" },
   { name: "javascript", category: "language" },
+  { name: "typescript", category: "other" },
   { name: "C#", category: "language" },
   { name: "react", category: "frontend" },
   { name: "angular", category: "frontend" },

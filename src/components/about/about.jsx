@@ -10,16 +10,26 @@ const About = () => {
         <div className="about">
           <h2 className="about__title">Who am i?</h2>
           <p>
-            I'm a Dominican Republic based full stack developer, I'm always
-            looking for an opportunity to code, design and learn new things.
-            Before becoming a developer I used to study architecture where I
-            learned a lot about planning, design and keeping things simple,
-            something I tend to do at everything that I do in life.
+            I'm a full stack software developer based in Dominican Republic and
+            a former architecture student.
           </p>
           <p>
-            In my spare time I'm usually building things and searching for new
-            skills to learn. I also speak Spanish, enjoy watching movies and
-            traveling to exciting places.
+            As a developer, I aim to become a software architect. I'm serious
+            about writing clean code and I'm always looking for an opportunity
+            to improve on this existing skill, I suppose that's why I enjoy code
+            review with my peers so much. In addition, I focus on crafting apps
+            that are appealing, I like well designed stuffs.
+          </p>
+          <p>
+            As a human, I'm passionate about programming and I enjoy learning
+            new things, I take advantage of that to expand my skill set as a
+            developer. I also speak Spanish, enjoy watching movies and traveling
+            to exciting places.
+          </p>
+          <p>
+            In my spare time I'm usually on HackerRank improving my problem
+            solving skill, besides I just take pleasure in solving new
+            challenges.
           </p>
         </div>
         <div className="skills">

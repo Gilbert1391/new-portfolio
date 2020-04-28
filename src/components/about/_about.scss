@@ -12,7 +12,7 @@
   }
 
   p {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-bottom: 2rem;
   }
 }
@@ -20,7 +20,7 @@
 .skills {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(8, 1fr);
   grid-gap: 1rem;
   margin-left: auto;
 
