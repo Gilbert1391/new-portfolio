@@ -6,67 +6,25 @@
   box-sizing: inherit;
 }
 
-// MEDIA QUERY MANAGER
-/*
-0-600px        phone
-600-740px      phone-land
-600-900px      table portrait
-900-1200px     table landscape
-{1200-1800px}  is where normal styles apply
-1800px +       big screen
-*/
-
-@mixin responsive($breakpoint) {
-  @if $breakpoint == phone {
-    @media only screen and (max-width: 37.5em) {
-      @content;
-    } // 600px (600/16 = 37.5)
-  }
-
-  @if $breakpoint == phone-land {
-    @media only screen and (max-width: 46.25em) {
-      @content;
-    } // 740px
-  }
-
-  @if $breakpoint == tab-port {
-    @media only screen and (max-width: 56.25em) {
-      @content;
-    } // 900px
-  }
-
-  @if $breakpoint == tab-land {
-    @media only screen and (max-width: 75em) {
-      @content;
-    } // 1200px
-  }
-
-  @if $breakpoint == big-desktop {
-    @media only screen and (min-width: 112.5em) {
-      @content;
-    } //1800px
-  }
-}
-
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: 62.5%; // 1rem = 10px, (10/16) * 100 = 62.5
   -webkit-font-smoothing: antialiased;
 
   @include responsive(tab-land) {
-    font-size: 56.25%; //1rem = 9px, 9/16 = 56.25
+    font-size: 56.25%; //1rem = 9px, (9/16) * 100 = 56.25
   }
 
   @include responsive(tab-port) {
-    font-size: 50%; //1rem = 8px, 8/16= 50
+    font-size: 50%; //1rem = 8px, (8/16) * 100 = 50
   }
 
   @include responsive(phone) {
-    font-size: 44%; //1rem = 7px, 7/16= 44
+    font-size: 44%; //1rem = 7px, (7/16) * 100 = 44
   }
 
   @include responsive(big-desktop) {
-    font-size: 75%; //1rem = 12px, 75
+    font-size: 75%; //1rem = 12px,(12/16) * 100 = 75
   }
 }
 
@@ -82,6 +40,5 @@ html {
 
 body {
   font-family: "helveticaNeue", sans-serif;
-  font-size: 1.4rem;
   line-height: 1.4;
 }

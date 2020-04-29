@@ -1,19 +1,41 @@
 .about-flex {
   display: flex;
+
+  @include responsive(tab-port) {
+    display: block;
+  }
 }
 
 .about {
   width: 40%;
   color: $color-dark;
 
+  @include responsive(tab-land) {
+    width: 50%;
+  }
+
+  @include responsive(tab-port) {
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+
   &__title {
     font-family: "theBoldFont";
     font-size: 3rem;
+    margin-bottom: 2rem;
+
+    @include responsive(phone-land) {
+      margin-bottom: 1rem;
+    }
   }
 
   p {
     font-size: 1.6rem;
     margin-bottom: 2rem;
+
+    @include responsive(phone-land) {
+      margin-bottom: 1rem;
+    }
   }
 }
 
@@ -23,6 +45,16 @@
   grid-template-rows: repeat(8, 1fr);
   grid-gap: 1rem;
   margin-left: auto;
+  font-size: 1.3rem;
+
+  @include responsive(tab-land) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include responsive(tab-port) {
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 1.6rem;
+  }
 
   &__item {
     display: flex;
@@ -33,5 +65,9 @@
     background-color: $color-primary;
     font-weight: bold;
     border: 1px solid;
+
+    @include responsive(tab-port) {
+      padding: 0.8rem;
+    }
   }
 }

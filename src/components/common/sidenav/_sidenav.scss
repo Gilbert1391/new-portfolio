@@ -5,6 +5,10 @@
   background-color: $color-primary;
   display: flex;
   justify-content: center;
+
+  @include responsive(tab-port) {
+    display: none;
+  }
 }
 
 .side-nav-navigation {

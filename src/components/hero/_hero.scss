@@ -3,6 +3,10 @@
   background-color: $color-primary;
   overflow: hidden;
 
+  @include responsive(tab-port) {
+    height: 60vh;
+  }
+
   &__intro {
     width: 70rem;
     height: 20rem;
@@ -11,5 +15,9 @@
     margin-top: -10rem;
     left: 50%;
     margin-left: -35rem;
+
+    @include responsive(tab-port) {
+      top: 30%;
+    }
   }
 }
