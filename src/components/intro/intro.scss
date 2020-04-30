@@ -5,6 +5,7 @@
   align-items: center;
   font-family: "theBoldFont";
   font-size: 4.5rem;
+  word-spacing: 1rem;
   color: $color-tertiary;
 
   @include responsive(phone-port) {

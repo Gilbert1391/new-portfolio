@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaPaperPlane } from "react-icons/fa";
 import anime from "animejs";
 import AnimationContext from "../../../context/AnimationContext";
 import Nav from "../nav/nav";
@@ -77,6 +77,15 @@ const PhoneBurgerMenu = () => {
                 rel="noopener noreferrer"
               >
                 <FaLinkedin className="phone-social-nav__icon" />
+              </a>
+            </li>
+            <li className="phone-social-nav__item">
+              <a
+                href="mailto:pro.devgilbert@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaPaperPlane className="phone-social-nav__icon" />
               </a>
             </li>
           </ul>

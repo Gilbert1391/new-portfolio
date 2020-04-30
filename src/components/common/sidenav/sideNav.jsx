@@ -31,7 +31,14 @@ const SideNav = () => {
         </li>
 
         <li className="side-nav-navigation__item">
-          <FaPaperPlane className="side-nav-navigation__icon" />
+          <a
+            href="mailto:pro.devgilbert@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="side-nav-navigation__link"
+          >
+            <FaPaperPlane className="side-nav-navigation__icon" />
+          </a>
         </li>
       </ul>
     </nav>

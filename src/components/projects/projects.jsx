@@ -37,7 +37,7 @@ const Projects = () => {
                   {e.name}
                 </a>
               </h3>
-              <p>{e.description}</p>
+              <p dangerouslySetInnerHTML={{ __html: e.description }}></p>
               <a
                 className="card-description__link-icon"
                 href={e.githubUrl}

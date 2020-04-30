@@ -22,8 +22,8 @@ export const projectsData = [
   {
     name: "Fifteen",
     description: `Web app built with the MERN stack. Add /admin to the URL and login as admin 
-                  to modify the data by sending HTTP requests to the server. Credentials:
-                  username: admin, password: my_password`,
+                  to modify the data by sending HTTP requests to the server. Credentials:<br>
+                  <b>username:</b> admin, <b>password:</b> my_password`,
     imgName: "fifteen.png",
     siteUrl: "https://fifteen-app.herokuapp.com/",
     githubUrl: "https://github.com/Gilbert1391/fifteen-webapp",

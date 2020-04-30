@@ -6,8 +6,8 @@
   }
 }
 
-.about {
-  width: 40%;
+.about-group {
+  min-width: 50%;
   color: $color-dark;
 
   @include responsive(tab-land) {
@@ -37,19 +37,24 @@
       margin-bottom: 1rem;
     }
   }
+
+  &--skills {
+    padding-left: 5rem;
+
+    @include responsive(tab-port) {
+      padding-left: 0;
+    }
+  }
 }
 
-.skills {
+.skills-grid {
+  height: 100%;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(8, 1fr);
   grid-gap: 1rem;
   margin-left: auto;
   font-size: 1.3rem;
-
-  @include responsive(tab-land) {
-    grid-template-columns: repeat(4, 1fr);
-  }
 
   @include responsive(tab-port) {
     grid-template-columns: repeat(3, 1fr);
