@@ -8,12 +8,17 @@ const Heading = ({ title, number, section }) => {
   );
 
   useEffect(() => {
+    handleHeadingAnimation();
+  });
+
+  const handleHeadingAnimation = () => {
     if (isLinkAboutActive) {
       anime({
         targets: ".heading__bar--about",
         width: "40%",
         easing: "easeInOutQuad",
         direction: "normal",
+        duration: 600,
       });
     }
 
@@ -23,9 +28,10 @@ const Heading = ({ title, number, section }) => {
         width: "40%",
         easing: "easeInOutQuad",
         direction: "normal",
+        duration: 600,
       });
     }
-  });
+  };
 
   return (
     <div className="heading">

@@ -5,7 +5,7 @@ import AnimationContext from "../../../context/AnimationContext";
 import Nav from "../nav/nav";
 
 const PhoneBurgerMenu = () => {
-  const { isLinkHomeActive, isToggled, onMenuToggleState } = useContext(
+  const { isLinkHomeActive, isMenuToggled, onMenuToggleState } = useContext(
     AnimationContext
   );
 
@@ -14,7 +14,7 @@ const PhoneBurgerMenu = () => {
   });
 
   const handleMenuToggle = () => {
-    if (isToggled) {
+    if (isMenuToggled) {
       anime({
         targets: ".phone-nav-wrapper",
         height: "100vh",
@@ -34,29 +34,29 @@ const PhoneBurgerMenu = () => {
   return (
     <React.Fragment>
       <div
-        className={`phone-burger-menu${isToggled ? " toggled" : ""}`}
+        className={`phone-burger-menu${isMenuToggled ? " toggled" : ""}`}
         onClick={() => onMenuToggleState()}
       >
         <div
           className={`phone-burger-menu__bar${
-            !isLinkHomeActive && !isToggled ? " dark" : ""
+            !isLinkHomeActive && !isMenuToggled ? " dark" : ""
           }`}
         ></div>
         <div
           className={`phone-burger-menu__bar${
-            !isLinkHomeActive && !isToggled ? " dark" : ""
+            !isLinkHomeActive && !isMenuToggled ? " dark" : ""
           }`}
         ></div>
         <div
           className={`phone-burger-menu__bar${
-            !isLinkHomeActive && !isToggled ? " dark" : ""
+            !isLinkHomeActive && !isMenuToggled ? " dark" : ""
           }`}
         ></div>
       </div>
       <div className="phone-nav-wrapper">
         <nav
           className={`phone-screen-size-nav${
-            !isToggled ? " hide-phone-nav" : ""
+            !isMenuToggled ? " hide-phone-nav" : ""
           }`}
         >
           <Nav />

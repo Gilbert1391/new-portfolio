@@ -5,32 +5,33 @@ import About from "./components/about/about";
 import Projects from "./components/projects/projects";
 import SideNav from "./components/common/sidenav/sideNav";
 import AnimationContext from "./context/AnimationContext";
+import pageSections from "./constants";
 
 const App = () => {
   const [isLinkHomeActive, setIsLinkHomeActive] = useState(true);
   const [isLinkAboutActive, setIsLinkAboutActive] = useState(false);
   const [isLinkProjectsActive, setIsLinkProjectsActive] = useState(false);
-  const [isToggled, setIsToggled] = useState(false);
+  const [isMenuToggled, setIsMenuToggled] = useState(false);
 
-  const handleLinkHomeState = () => {
-    setIsLinkHomeActive(true);
+  const { home, about } = pageSections;
+
+  const handleLinkSectionState = (section) => {
+    if (section === home) {
+      setIsLinkHomeActive(true);
+    } else if (section === about) {
+      setIsLinkAboutActive(true);
+      setIsLinkHomeActive(false);
+    } else {
+      setIsLinkProjectsActive(true);
+    }
   };
 
-  const handleLinkAboutState = () => {
-    setIsLinkAboutActive(true);
-    setIsLinkHomeActive(false);
-  };
-
-  const handleLinkProjectsState = () => {
-    setIsLinkProjectsActive(true);
-  };
-
-  const handleMenuFadeAnimation = () => {
-    setIsToggled(false);
+  const handlePhoneMenuAnimation = () => {
+    setIsMenuToggled(false);
   };
 
   const handleMenuToggleState = () => {
-    setIsToggled(isToggled ? false : true);
+    setIsMenuToggled(isMenuToggled ? false : true);
   };
 
   return (
@@ -39,11 +40,9 @@ const App = () => {
         isLinkHomeActive,
         isLinkAboutActive,
         isLinkProjectsActive,
-        isToggled,
-        onLinkHomeState: handleLinkHomeState,
-        onLinkAboutState: handleLinkAboutState,
-        onLinkProjectsState: handleLinkProjectsState,
-        onMenuFadeAnimation: handleMenuFadeAnimation,
+        isMenuToggled,
+        onLinkSectionState: handleLinkSectionState,
+        onPhoneMenuAnimation: handlePhoneMenuAnimation,
         onMenuToggleState: handleMenuToggleState,
       }}
     >
