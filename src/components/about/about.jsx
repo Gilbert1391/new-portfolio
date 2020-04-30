@@ -4,7 +4,7 @@ import { skillsData } from "../../services/data";
 
 const About = () => {
   return (
-    <section name="about" className="section">
+    <section name="about" className="section section--about">
       <Heading title="about me" number="01" section="about" />
       <div className="about-flex">
         <div className="about">

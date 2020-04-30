@@ -4,8 +4,18 @@
   text-transform: uppercase;
   list-style-type: none;
 
+  @include responsive(tab-port) {
+    flex-direction: column;
+    align-items: center;
+    font-size: 3rem;
+  }
+
   &__item:not(:last-child) {
     margin-right: 1.5rem;
+
+    @include responsive(tab-port) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__link {

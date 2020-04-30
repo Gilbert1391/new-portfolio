@@ -4,27 +4,47 @@ import Hero from "./components/hero/hero";
 import About from "./components/about/about";
 import Projects from "./components/projects/projects";
 import SideNav from "./components/common/sidenav/sideNav";
-import HeadingBarContext from "./context/HeadingBarContext";
+import AnimationContext from "./context/AnimationContext";
 
 const App = () => {
+  const [isLinkHomeActive, setIsLinkHomeActive] = useState(true);
   const [isLinkAboutActive, setIsLinkAboutActive] = useState(false);
   const [isLinkProjectsActive, setIsLinkProjectsActive] = useState(false);
+  const [isToggled, setIsToggled] = useState(false);
+
+  const handleLinkHomeState = () => {
+    setIsLinkHomeActive(true);
+  };
 
   const handleLinkAboutState = () => {
     setIsLinkAboutActive(true);
+    setIsLinkHomeActive(false);
   };
 
   const handleLinkProjectsState = () => {
     setIsLinkProjectsActive(true);
   };
 
+  const handleMenuFadeAnimation = () => {
+    setIsToggled(false);
+  };
+
+  const handleMenuToggleState = () => {
+    setIsToggled(isToggled ? false : true);
+  };
+
   return (
-    <HeadingBarContext.Provider
+    <AnimationContext.Provider
       value={{
+        isLinkHomeActive,
         isLinkAboutActive,
         isLinkProjectsActive,
+        isToggled,
+        onLinkHomeState: handleLinkHomeState,
         onLinkAboutState: handleLinkAboutState,
         onLinkProjectsState: handleLinkProjectsState,
+        onMenuFadeAnimation: handleMenuFadeAnimation,
+        onMenuToggleState: handleMenuToggleState,
       }}
     >
       <React.Fragment>
@@ -45,7 +65,7 @@ const App = () => {
           </StickyContainer>
         </main>
       </React.Fragment>
-    </HeadingBarContext.Provider>
+    </AnimationContext.Provider>
   );
 };
 

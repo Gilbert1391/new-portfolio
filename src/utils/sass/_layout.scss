@@ -29,6 +29,10 @@
     min-width: 5.5rem;
     height: 100vh;
     padding: 1rem 0;
+
+    @include responsive(tab-port) {
+      display: none;
+    }
   }
 }
 
@@ -43,11 +47,16 @@
   }
 
   @include responsive(tab-port) {
-    height: 80vh;
     padding-right: 0;
   }
 
   @include responsive(phone-land) {
     height: fit-content;
+  }
+
+  &--about {
+    @include responsive(tab-port) {
+      height: 80vh;
+    }
   }
 }

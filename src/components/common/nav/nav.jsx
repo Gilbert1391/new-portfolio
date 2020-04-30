@@ -1,52 +1,57 @@
 import React, { useContext } from "react";
 import { Link } from "react-scroll";
-import HeadingBarContext from "../../../context/HeadingBarContext";
+import AnimationContext from "../../../context/AnimationContext";
 
 const Nav = () => {
-  const { onLinkAboutState, onLinkProjectsState } = useContext(
-    HeadingBarContext
-  );
+  const {
+    onLinkHomeState,
+    onLinkAboutState,
+    onLinkProjectsState,
+    onMenuFadeAnimation,
+  } = useContext(AnimationContext);
 
   return (
-    <nav>
-      <ul className="nav">
-        <li className="nav__item">
-          <Link
-            to="home"
-            spy={true}
-            smooth={true}
-            className="nav__link"
-            activeClass="active"
-          >
-            Home
-          </Link>
-        </li>
-        <li className="nav__item">
-          <Link
-            to="about"
-            spy={true}
-            smooth={true}
-            className="nav__link"
-            activeClass="active"
-            onSetActive={onLinkAboutState}
-          >
-            About
-          </Link>
-        </li>
-        <li className="nav__item">
-          <Link
-            to="projects"
-            spy={true}
-            smooth={true}
-            className="nav__link"
-            activeClass="active"
-            onSetActive={onLinkProjectsState}
-          >
-            Projects
-          </Link>
-        </li>
-      </ul>
-    </nav>
+    <ul className="nav">
+      <li className="nav__item">
+        <Link
+          to="home"
+          spy={true}
+          smooth={true}
+          className="nav__link"
+          activeClass="active"
+          onSetActive={onLinkHomeState}
+          onClick={() => onMenuFadeAnimation()}
+        >
+          Home
+        </Link>
+      </li>
+      <li className="nav__item">
+        <Link
+          to="about"
+          spy={true}
+          smooth={true}
+          className="nav__link"
+          activeClass="active"
+          onSetActive={onLinkAboutState}
+          onClick={() => onMenuFadeAnimation()}
+        >
+          About
+        </Link>
+      </li>
+      <li className="nav__item">
+        <Link
+          to="projects"
+          spy={true}
+          smooth={true}
+          className="nav__link"
+          activeClass="active"
+          onSetActive={onLinkProjectsState}
+          onClick={() => onMenuFadeAnimation()}
+        >
+          Projects
+        </Link>
+      </li>
+    </ul>
   );
 };
 

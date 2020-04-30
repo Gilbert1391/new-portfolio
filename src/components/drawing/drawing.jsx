@@ -27,7 +27,7 @@ const Drawing = () => {
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 800">
         <g fill="none" fillRule="evenodd" ref={nodeRef}>
           {pathData.map((e) => (
-            <path stroke={e.color} d={e.path} key={e.id}></path>
+            <path stroke={e.color} d={e.path} strokeWidth={2} key={e.id}></path>
           ))}
         </g>
       </svg>

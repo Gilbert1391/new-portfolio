@@ -1,10 +1,10 @@
 import React, { useEffect, useContext } from "react";
 import anime from "animejs";
-import HeadingBarContext from "../../../context/HeadingBarContext";
+import AnimationContext from "../../../context/AnimationContext";
 
 const Heading = ({ title, number, section }) => {
   const { isLinkAboutActive, isLinkProjectsActive } = useContext(
-    HeadingBarContext
+    AnimationContext
   );
 
   useEffect(() => {

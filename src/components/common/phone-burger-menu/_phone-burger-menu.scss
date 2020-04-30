@@ -1,0 +1,89 @@
+.phone-screen-size-nav {
+  display: none;
+  @include responsive(tab-port) {
+    display: block;
+    width: fit-content;
+    height: fit-content;
+  }
+}
+
+.hide-phone-nav {
+  display: none;
+}
+
+.phone-social-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 30rem;
+  height: 10rem;
+  margin-top: 4rem;
+  list-style-type: none;
+
+  &__item {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  &__icon {
+    color: $color-secondary;
+    width: 100%;
+    height: 100%;
+    transition: 0.2s;
+  }
+}
+
+.phone-burger-menu {
+  display: none;
+
+  @include responsive(tab-port) {
+    display: block;
+    position: fixed;
+    top: 2rem;
+    z-index: 10;
+  }
+
+  &__bar {
+    width: 3rem;
+    height: 2px;
+    background-color: $color-secondary;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+}
+
+.dark {
+  background-color: $color-primary;
+}
+
+// transform slices into a cross mark
+.toggled .phone-burger-menu__bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.toggled .phone-burger-menu__bar:nth-child(2) {
+  opacity: 0;
+}
+
+.toggled .phone-burger-menu__bar:nth-child(3) {
+  transform: rotate(45deg) translate(-6px, -7px);
+}
+
+// phone navigation
+.phone-nav-wrapper {
+  display: none;
+  @include responsive(tab-port) {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 8;
+    background-color: $color-primary;
+    opacity: 0;
+  }
+}
