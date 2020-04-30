@@ -23,7 +23,7 @@ html {
     font-size: 44%; //1rem = 7px, (7/16) * 100 = 44
   }
 
-  @include responsive(big-desktop) {
+  @include responsive(large-screen) {
     font-size: 75%; //1rem = 12px,(12/16) * 100 = 75
   }
 }

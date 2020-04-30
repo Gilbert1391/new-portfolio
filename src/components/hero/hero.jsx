@@ -11,6 +11,7 @@ const Hero = () => {
       <div className="hero__intro">
         <Intro />
       </div>
+      {/* <Drawing /> */}
     </section>
   );
 };

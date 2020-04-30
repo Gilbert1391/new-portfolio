@@ -1,20 +1,28 @@
 .container {
   display: flex;
+  height: fit-content;
   padding-right: 1rem;
   padding-left: 6rem;
   background-color: $color-secondary;
 
+  @include responsive(tab-land) {
+    padding-left: 3rem;
+  }
+
   @include responsive(tab-port) {
-    height: 175vh;
-    padding: 0 4rem;
+    padding: 0 2.5rem;
   }
 
   @include responsive(phone-land) {
-    padding: 0 1.5rem;
+    padding-bottom: 2rem;
   }
 
-  @include responsive(tab-land) {
-    padding-left: 3rem;
+  @include responsive(larger-screen) {
+    padding-left: 10rem;
+  }
+
+  @include responsive(big-desktop) {
+    padding-left: 15rem;
   }
 
   &__main {
@@ -50,13 +58,17 @@
     padding-right: 0;
   }
 
-  @include responsive(phone-land) {
-    height: fit-content;
+  @include responsive(big-desktop) {
+    padding-right: 10rem;
   }
 
   &--about {
     @include responsive(tab-port) {
       height: 80vh;
     }
+  }
+
+  @include responsive(phone-land) {
+    height: fit-content;
   }
 }

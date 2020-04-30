@@ -6,6 +6,10 @@
   font-family: "theBoldFont";
   font-size: 4.5rem;
   color: $color-tertiary;
+
+  @include responsive(phone-port) {
+    font-size: 3rem;
+  }
 }
 
 .intro p:first-child {

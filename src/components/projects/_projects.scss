@@ -6,6 +6,10 @@
   @include responsive(tab-port) {
     justify-content: start;
   }
+
+  @include responsive(phone-port) {
+    justify-content: center;
+  }
 }
 
 .card {
@@ -22,6 +26,15 @@
   @include responsive(tab-land) {
     height: 50rem;
   }
+
+  @include responsive(phone-port) {
+    width: calc(100% / 1 - 6rem);
+    margin-left: 0;
+  }
+
+  @include responsive(big-desktop) {
+    height: 50rem;
+  }
 }
 
 .card:not(:last-child) {
@@ -30,12 +43,20 @@
   @include responsive(tab-port) {
     margin-right: 0;
   }
+
+  @include responsive(phone-port) {
+    margin-bottom: 2rem;
+  }
 }
 
 .card:first-child {
   @include responsive(tab-port) {
     margin-right: 2rem;
     margin-bottom: 2rem;
+  }
+
+  @include responsive(phone-port) {
+    margin-right: 0;
   }
 }
 

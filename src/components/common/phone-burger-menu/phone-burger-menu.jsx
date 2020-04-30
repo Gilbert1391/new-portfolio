@@ -1,39 +1,41 @@
-import React, { useState, useContext } from "react";
-import { FaGithub, FaLinkedin, FaPaperPlane } from "react-icons/fa";
+import React, { useContext, useEffect } from "react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import anime from "animejs";
 import AnimationContext from "../../../context/AnimationContext";
 import Nav from "../nav/nav";
-import anime from "animejs";
 
 const PhoneBurgerMenu = () => {
   const { isLinkHomeActive, isToggled, onMenuToggleState } = useContext(
     AnimationContext
   );
 
-  const handleOnMenuClick = () => {
-    onMenuToggleState();
-  };
+  useEffect(() => {
+    handleMenuToggle();
+  });
 
-  if (isToggled) {
-    anime({
-      targets: ".phone-nav-wrapper",
-      opacity: 1,
-      easing: "easeInOutQuad",
-      duration: 500,
-    });
-  } else {
-    anime({
-      targets: ".phone-nav-wrapper",
-      opacity: 0,
-      easing: "easeInOutQuad",
-      duration: 500,
-    });
-  }
+  const handleMenuToggle = () => {
+    if (isToggled) {
+      anime({
+        targets: ".phone-nav-wrapper",
+        height: "100vh",
+        easing: "easeInOutQuad",
+        duration: 500,
+      });
+    } else {
+      anime({
+        targets: ".phone-nav-wrapper",
+        height: "0vh",
+        easing: "easeInOutQuad",
+        duration: 500,
+      });
+    }
+  };
 
   return (
     <React.Fragment>
       <div
         className={`phone-burger-menu${isToggled ? " toggled" : ""}`}
-        onClick={() => handleOnMenuClick()}
+        onClick={() => onMenuToggleState()}
       >
         <div
           className={`phone-burger-menu__bar${
@@ -76,9 +78,6 @@ const PhoneBurgerMenu = () => {
               >
                 <FaLinkedin className="phone-social-nav__icon" />
               </a>
-            </li>
-            <li className="phone-social-nav__item">
-              <FaPaperPlane className="phone-social-nav__icon" />
             </li>
           </ul>
         </nav>

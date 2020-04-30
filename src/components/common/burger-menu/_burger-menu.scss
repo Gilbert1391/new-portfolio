@@ -19,9 +19,13 @@
     justify-content: center;
     background-color: $color-primary;
     position: absolute;
-    top: -1.6rem;
+    top: -90%;
     right: 4.3rem;
     cursor: default;
+
+    @include responsive(large-screen) {
+      top: -100%;
+    }
   }
 
   &__bar {

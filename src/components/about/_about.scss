@@ -56,6 +56,10 @@
     font-size: 1.6rem;
   }
 
+  @include responsive(phone-land) {
+    grid-template-rows: repeat(6, 1fr);
+  }
+
   &__item {
     display: flex;
     justify-content: center;

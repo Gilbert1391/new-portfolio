@@ -16,6 +16,7 @@ const BurgerMenu = () => {
         width: "20rem",
         easing: "easeOutCubic",
         direction: "normal",
+        duration: 500,
       });
     } else {
       anime({
@@ -23,6 +24,7 @@ const BurgerMenu = () => {
         width: "0rem",
         easing: "easeOutCubic",
         direction: "normal",
+        duration: 500,
       });
     }
   };

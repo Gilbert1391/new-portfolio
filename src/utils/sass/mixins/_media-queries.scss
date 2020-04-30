@@ -13,7 +13,7 @@ In media queries em and rem are not affected by the root font-size setting
 */
 
 @mixin responsive($breakpoint) {
-  @if $breakpoint == phone {
+  @if $breakpoint == phone-port {
     @media only screen and (max-width: 37.5em) {
       @content;
     } // 600px/16 = 37.5
@@ -35,6 +35,20 @@ In media queries em and rem are not affected by the root font-size setting
     @media only screen and (max-width: 75em) {
       @content;
     } // 1200px/16 = 75
+  }
+
+  // media for 14+ inches screen size
+  @if $breakpoint == large-screen {
+    @media only screen and (min-width: 84em) {
+      @content;
+    } //1344px/16 = 84
+  }
+
+  // media for 17+ inches screen size
+  @if $breakpoint == larger-screen {
+    @media only screen and (min-width: 102em) {
+      @content;
+    } //1632px/16 = 102
   }
 
   @if $breakpoint == big-desktop {
