@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/new-portfolio/static/css/main.e7a16f71.chunk.css",
+    "main.css": "/new-portfolio/static/css/main.58ce4186.chunk.css",
     "main.js": "/new-portfolio/static/js/main.5ea3a4b2.chunk.js",
     "main.js.map": "/new-portfolio/static/js/main.5ea3a4b2.chunk.js.map",
     "runtime~main.js": "/new-portfolio/static/js/runtime~main.69dd43ee.js",
@@ -8,9 +8,10 @@
     "static/js/2.f718aec5.chunk.js": "/new-portfolio/static/js/2.f718aec5.chunk.js",
     "static/js/2.f718aec5.chunk.js.map": "/new-portfolio/static/js/2.f718aec5.chunk.js.map",
     "index.html": "/new-portfolio/index.html",
-    "precache-manifest.957af5e734a2565c86471d20eea7b024.js": "/new-portfolio/precache-manifest.957af5e734a2565c86471d20eea7b024.js",
+    "precache-manifest.b8c159ee8f7474c1492db69c197d7b35.js": "/new-portfolio/precache-manifest.b8c159ee8f7474c1492db69c197d7b35.js",
     "service-worker.js": "/new-portfolio/service-worker.js",
-    "static/css/main.e7a16f71.chunk.css.map": "/new-portfolio/static/css/main.e7a16f71.chunk.css.map",
+    "static/css/main.58ce4186.chunk.css.map": "/new-portfolio/static/css/main.58ce4186.chunk.css.map",
+    "static/media/main.scss": "/new-portfolio/static/media/TheBoldFont.b4273079.woff",
     "static/media/bryant-hill.png": "/new-portfolio/static/media/bryant-hill.f93b9ae3.png",
     "static/media/dashboard-box.png": "/new-portfolio/static/media/dashboard-box.af9eaa6b.png",
     "static/media/fifteen.png": "/new-portfolio/static/media/fifteen.cef62a43.png"
